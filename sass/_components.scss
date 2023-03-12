@@ -1,0 +1,53 @@
+.logo {
+  padding: 4rem;
+}
+
+.reset-btn {
+  height: 4.8rem;
+
+  .btn {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: var(--color-light-cyan);
+    border-radius: var(--border-radius-small);
+    font-weight: inherit;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--color-cyan);
+    cursor: pointer;
+    transition: background 0.5s;
+
+    &:hover,
+    &:active {
+      background: var(--color-hover);
+    }
+    &:disabled {
+      background: var(--color-btn-disabled);
+      cursor: not-allowed;
+    }
+  }
+}
+
+.error-message--bill,
+.error-message--tip,
+.error-message--people {
+  color: var(--color-error);
+  display: none;
+}
+.error-message--bill.show,
+.error-message--tip.show,
+.error-message--people.show {
+  display: block;
+}
+
+.author {
+  padding: 4rem 1rem 1rem 0;
+  align-self: flex-end;
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: var(--color-cyan);
+  }
+}

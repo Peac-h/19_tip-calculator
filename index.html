@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tip Calculator, coded by the Peach." />
+    <meta name="keywords" content="HTML, CSS, Sass, Javascript, Coding" />
+    <meta name="author" content="the Peach" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <title>Tip calculator | Frontend Mentor</title>
+  </head>
+  <body>
+    <header class="logo">
+      <img src="images/logo.svg" alt="tip calculator logo" />
+    </header>
+
+    <main class="tip-calculator">
+      <!-- part 1 -->
+      <div class="tip-calculator--selection">
+        <!-- 1.1 -->
+        <div class="input-container">
+          <div class="label">
+            <label for="billInput">Bill</label>
+            <span class="error-message--bill">Invalid number</span>
+          </div>
+          <input
+            class="input svg--bill"
+            id="billInput"
+            type="number"
+            placeholder="0"
+            value="142.55"
+            onkeypress="limitKeypress(event, this.value, 4)"
+            onpaste="return false;"
+          />
+        </div>
+
+        <!-- 1.2 -->
+        <div class="tip-selection">
+          <div class="label">
+            <label>Select Tip %</label>
+            <span class="error-message--tip">Invalid number</span>
+          </div>
+          <div class="tips" id="tips">
+            <div class="tip">5%</div>
+            <div class="tip">10%</div>
+            <div class="tip tip--active">15%</div>
+            <div class="tip">25%</div>
+            <div class="tip">50%</div>
+            <input
+              class="tip tip--custom"
+              id="tipInput"
+              type="number"
+              placeholder="Custom"
+              onkeypress="limitKeypress(event, this.value, 2)"
+              onpaste="return false;"
+            />
+          </div>
+        </div>
+
+        <!-- 1.3 -->
+        <div class="input-container">
+          <div class="label">
+            <label for="peopleInput">Number of People</label>
+            <span class="error-message--people">Invalid number</span>
+          </div>
+          <input
+            class="input svg--people"
+            id="peopleInput"
+            type="number"
+            placeholder="0"
+            value="5"
+            onkeypress="limitKeypress(event, this.value, 3)"
+            onpaste="return false;"
+          />
+        </div>
+      </div>
+
+      <!-- part 2 -->
+      <div class="tip-calculator--display">
+        <div class="total">
+          <div>
+            <p>Tip&nbsp;Amount</p>
+            <p class="total-person">/&nbsp;person</p>
+          </div>
+          <p class="total-sum" id="tipPerPerson">$4.27</p>
+        </div>
+        <div class="total">
+          <div>
+            <p>Total</p>
+            <p class="total-person">/&nbsp;person</p>
+          </div>
+          <p class="total-sum" id="totalPerPerson">$32.79</p>
+        </div>
+        <div class="reset-btn">
+          <button class="btn" id="btnReset">reset</button>
+        </div>
+      </div>
+    </main>
+    <div class="author">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/Peac-h">the Peach</a>.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+// Calculator Display (The Right) Part
+
+.total {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  color: var(--color-white);
+  padding: 1.6rem 0;
+
+  @media only screen and (max-width: $bp-big) {
+    padding: 0;
+  }
+
+  &-person {
+    font-size: var(--font-size-smallest);
+    line-height: 1.9rem;
+    color: var(--color-grayish-cyan);
+  }
+
+  &-sum {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-bigest);
+    color: var(--color-light-cyan);
+
+    @media only screen and (max-width: $bp-big) {
+      font-size: var(--font-size-medium);
+    }
+  }
+
+  &:nth-child(2) {
+    margin-bottom: auto;
+  }
+}
