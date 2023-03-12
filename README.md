@@ -10,7 +10,7 @@ The app's layout is optimized for all screen sizes and has been designed in acco
 
 ## Checkout the live demo
 
-[Tip Calculator]()
+[Tip Calculator](https://peac-h.github.io/19_tip-calculator/)
 
 ## Built with
 
